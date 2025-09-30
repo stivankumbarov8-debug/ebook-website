@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Ebook Title</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+  body { font-family: 'Roboto', sans-serif; color: #333; background: #f9f9f9; }
+
+  /* Header */
+  header { background: linear-gradient(135deg, #4CAF50, #66bb6a); color: white; text-align: center; padding: 5rem 1rem; }
+  header h1 { font-size: 3rem; margin-bottom: 1rem; animation: fadeInDown 1s; }
+  header p { font-size: 1.3rem; margin-bottom: 2rem; animation: fadeInUp 1s; }
+
+  /* Buttons */
+  .btn { display: inline-block; padding: 1rem 2rem; border-radius: 50px; font-size: 1.2rem; color: #fff; background: #ff6600; border: none; cursor: pointer; transition: 0.3s; text-decoration: none; }
+  .btn:hover { background: #e65c00; }
+
+  /* Hero */
+  .hero { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 2rem; padding: 3rem 1rem; animation: fadeIn 1s; }
+  .hero img { max-width: 350px; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); }
+
+  /* Sections */
+  section { padding: 4rem 1rem; max-width: 1000px; margin: auto; }
+  h2 { text-align: center; font-size: 2.5rem; margin-bottom: 2rem; }
+
+  .benefits, .testimonials { display: flex; flex-direction: column; gap: 1.5rem; }
+  .benefit, .testimonial { background: #fff; padding: 2rem; border-radius: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); transition: transform 0.3s; }
+  .benefit:hover, .testimonial:hover { transform: translateY(-5px); }
+
+  .buy-section { text-align: center; background: #f0f0f0; border-radius: 15px; padding: 3rem 1rem; margin-top: 3rem; }
+
+  /* Lead capture */
+  .lead-capture { margin-top: 2rem; text-align: center; }
+  .lead-capture input[type="email"] { padding: 0.8rem 1rem; font-size: 1rem; border-radius: 5px; border: 1px solid #ccc; width: 250px; }
+  .lead-capture button { padding: 0.8rem 1.5rem; font-size: 1rem; border-radius: 5px; border: none; background: #4CAF50; color: #fff; cursor: pointer; transition: 0.3s; margin-left: 0.5rem; }
+  .lead-capture button:hover { background: #45a049; }
+
+  footer { text-align: center; padding: 2rem 1rem; background: #333; color: #fff; margin-top: 4rem; }
+
+  /* Responsive */
+  @media (min-width: 768px) {
+    .hero { flex-direction: row; text-align: left; gap: 3rem; }
+    .benefits, .testimonials { flex-direction: row; justify-content: space-between; }
+    .benefit, .testimonial { flex: 1; }
+  }
+
+  /* Animations */
+  @keyframes fadeInDown { from { opacity: 0; transform: translateY(-50px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeInUp { from { opacity: 0; transform: translateY(50px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Your Ebook Title</h1>
+  <p>Learn how to [achieve your desired result] in just [timeframe]</p>
+  <a href="#buy" class="btn">Get Your Copy Now</a>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="ebook-cover.jpg" alt="Ebook Cover">
+    <div>
+      <p>Discover proven strategies to [solve problem or achieve goal]. Start your journey today with "[Your Ebook Title]" and transform your life!</p>
+      <button class="btn" onclick="buyNow()">Buy Now for $9.99</button>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section>
+    <h2>Why You Need This Ebook</h2>
+    <div class="benefits">
+      <div class="benefit"><strong>Benefit 1:</strong> Explain clearly what readers will gain.</div>
+      <div class="benefit"><strong>Benefit 2:</strong> Another key result or skill they will acquire.</div>
+      <div class="benefit"><strong>Benefit 3:</strong> Highlight a unique feature of your ebook.</div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section>
+    <h2>What Readers Are Saying</h2>
+    <div class="testimonials">
+      <div class="testimonial">"This ebook changed my life! Highly recommend." – Jane D.</div>
+      <div class="testimonial">"Packed with actionable advice, loved it!" – Mark S.</div>
+      <div class="testimonial">"Easy to read and extremely helpful." – Sarah L.</div>
+    </div>
+  </section>
+
+  <!-- Buy Section -->
+  <section id="buy" class="buy-section">
+    <h2>Ready to Get Started?</h2>
+    <button class="btn" onclick="buyNow()">Buy Now</button>
+    <div class="lead-capture">
+      <p>Join our free newsletter for tips and updates:</p>
+      <input type="email" placeholder="Your email">
+      <button>Subscribe</button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Your Name. All rights reserved.
+</footer>
+
+<script>
+  function buyNow() {
+    // Replace with your actual payment link
+    window.location.href = "https://www.paypal.com/checkoutlink";
+  }
+</script>
+
+</body>
+</html>
